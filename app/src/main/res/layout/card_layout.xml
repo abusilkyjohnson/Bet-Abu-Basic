@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/header"
+            android:id="@+id/cardImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/paulvtwodefender"
