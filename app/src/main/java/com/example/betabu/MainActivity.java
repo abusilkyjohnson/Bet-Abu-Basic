@@ -5,13 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import kotlin.collections.builders.AbstractMapBuilderEntrySet;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AbuCardClickListener {
   //1-AdapterView
     private RecyclerView recyclerView;
     //2-Data Source;
@@ -47,10 +47,23 @@ public class MainActivity extends AppCompatActivity {
         sportsList.add(powerS);
         sportsList.add(tennis);
 
-        abuAdapter =  new AbuAdapter(sportsList);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        abuAdapter =  new AbuAdapter(sportsList);
         recyclerView.setAdapter(abuAdapter);
+
+        //still need to set the clicklistener her so it works how you want it on the screen we see on create
+        abuAdapter.setCardClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v, int pos) {
+
+        Toast.makeText(this,"Transition To: "+ sportsList.get(pos).getSportName(), Toast.LENGTH_SHORT).show();
 
     }
 }
