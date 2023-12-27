@@ -30,15 +30,22 @@ public class MainActivity extends AppCompatActivity {
         sportsList = new ArrayList<>();
 
         Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        /*Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);
-        Sport soccer = new Sport("Soccer",R.drawable.paulvtwodefender);*/
+        Sport bball = new Sport("Basketball",R.drawable.dirkfadeaway);
+        Sport mma = new Sport("MMA",R.drawable.connoratweighin);
+        Sport nfl = new Sport("NFL",R.drawable.footballpigskin);
+        Sport boxing = new Sport("Boxing",R.drawable.boxingtrainer);
+        Sport baseball = new Sport("Baseball",R.drawable.ortizhomerun);
+        Sport powerS = new Sport("Power Slap",R.drawable.powerslap);
+        Sport tennis = new Sport("Tennis",R.drawable.tennisgenericstockphotowomen);
 
         sportsList.add(soccer);
+        sportsList.add(bball);
+        sportsList.add(mma);
+        sportsList.add(nfl);
+        sportsList.add(boxing);
+        sportsList.add(baseball);
+        sportsList.add(powerS);
+        sportsList.add(tennis);
 
         abuAdapter =  new AbuAdapter(sportsList);
 

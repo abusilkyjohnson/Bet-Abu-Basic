@@ -15,9 +15,9 @@
 
         <ImageView
             android:id="@+id/cardImage"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/paulvtwodefender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +32,7 @@
             android:textSize="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/header" />
-
-
+            app:layout_constraintTop_toTopOf="@+id/cardImage" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
